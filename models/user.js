@@ -1,5 +1,5 @@
 module.exports = (sequelize,DataTypes)=>{
-    const user = sequelize.define("user",{
+    const user = sequelize.define("users",{
         userId:{type:DataTypes.INTEGER,allowNull:false},
         userName:{type:DataTypes.STRING,allowNull:false},
         email:{type:DataTypes.STRING,allowNull:false},
@@ -7,7 +7,7 @@ module.exports = (sequelize,DataTypes)=>{
         password:{type:DataTypes.STRING,allowNull:false},
         companyId:{type:DataTypes.INTEGER,
             references:{
-            model:"company",
+            model:"companies",
             key:"companyId",
             }
         }
